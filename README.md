@@ -43,3 +43,16 @@ PM> Install-Package IocServiceStack.Config
    /* Invoke this method in your program/startup class */
    IocServicelet.Configure(config => config.ConfigFromFile());
 ```
+#### OR
+```csharp
+   using IocServiceStack;
+   using IocServiceStack.Config;
+
+   /* Invoke this method in your program/startup class */
+   IocServicelet.Configure(config => {
+        config.AddServices(service => {
+            service.ConfigFromFile();
+            service.StrictMode = true;
+        };
+   });
+```
