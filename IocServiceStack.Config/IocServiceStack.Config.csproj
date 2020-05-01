@@ -2,11 +2,14 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp2.2</TargetFramework>
-    <Version>0.0.1</Version>
+    <Version>0.0.2</Version>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <Authors>rjinaga</Authors>
-    <Company>IocServiceStack</Company>
+    <Company>rjinaga</Company>
     <Copyright>© Rajeswara Rao Jinaga</Copyright>
+    <PackageLicenseUrl>https://github.com/rjinaga/IocServiceStack.Config/blob/master/LICENSE</PackageLicenseUrl>
+    <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+    <RepositoryUrl>https://github.com/rjinaga/IocServiceStack.Config</RepositoryUrl>
   </PropertyGroup>
 
   <ItemGroup>
