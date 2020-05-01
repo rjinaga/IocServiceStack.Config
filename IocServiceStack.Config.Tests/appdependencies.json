@@ -1,4 +1,5 @@
 ﻿{
+  // test
   "AppDependencies": {
     "Name": "business",
     "Modules": [
@@ -8,19 +9,24 @@
     "Dependencies": {
       "Name": "repository-layer",
       "Modules": [
-
+        "test22",
+        "test22222",
+        "test222221"
       ],
       "Dependencies": {
         "Name": "db-context-provider",
         "Modules": [
-
+          "test22x",
+          "test22222y",
+          "test22222y1",
+          "test22222y2"
         ]
       }
     }
   },
   "SharedDependencies": {
     "Modules": [
-
+      "test22s"
     ]
   }
 }

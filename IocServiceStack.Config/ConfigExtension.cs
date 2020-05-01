@@ -16,6 +16,7 @@
 
             if (containerOptions.Assemblies != null)
             {
+                
                 // Add dependecies in hirarchy
                 AddDependeciesRecursively(containerOptions, dependencies.AppDependencies.Dependencies);
 
@@ -52,6 +53,23 @@
             ConfigFromJsonContent(containerOptions, fileContent);
         }
 
+        private static void AddDependeciesRecursively(ContainerDependencyOptions containerOptions, AppDependencies dependencies)
+        {
+            if (dependencies == null)
+            {
+                return;
+            }
+            containerOptions.AddDependencies(layer =>
+            {
+                layer.Name = dependencies.Name;
+
+                var modules = dependencies.Modules;
+                layer.Assemblies = modules == null || modules.Length == 0 ? null : modules;
+
+                AddDependeciesRecursively(layer, dependencies.Dependencies);
+            });
+        }
+
         private static void AddDependeciesRecursively(ContainerOptions containerOptions, AppDependencies dependencies)
         {
             if (dependencies == null)
@@ -65,7 +83,7 @@
                 var modules = dependencies.Modules;
                 layer.Assemblies = modules == null || modules.Length == 0 ? null : modules;
 
-                AddDependeciesRecursively(containerOptions, dependencies.Dependencies);
+                AddDependeciesRecursively(layer, dependencies.Dependencies);
             });
         }
     }
