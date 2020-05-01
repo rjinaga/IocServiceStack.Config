@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+    <Version>0.0.1</Version>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <Authors>rjinaga</Authors>
+    <Company>IocServiceStack</Company>
+    <Copyright>© Rajeswara Rao Jinaga</Copyright>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="IocServiceStack" Version="2.0.5" />
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.1" />
+  </ItemGroup>
+
+</Project>

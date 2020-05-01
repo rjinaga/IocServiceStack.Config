@@ -1,0 +1,26 @@
+﻿{
+  "AppDependencies": {
+    "Name": "business",
+    "Modules": [
+      "test",
+      "test2"
+    ],
+    "Dependencies": {
+      "Name": "repository-layer",
+      "Modules": [
+
+      ],
+      "Dependencies": {
+        "Name": "db-context-provider",
+        "Modules": [
+
+        ]
+      }
+    }
+  },
+  "SharedDependencies": {
+    "Modules": [
+
+    ]
+  }
+}
