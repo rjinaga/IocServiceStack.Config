@@ -39,10 +39,7 @@ PM> Install-Package IocServiceStack.Config
  ```csharp
    using IocServiceStack;
    using IocServiceStack.Config;
-   
-   public static class ConfigureIocServiceStack {
-        public static void Configure() {
-            IocServicelet.Configure(config => config.ConfigFromFile());
-        }
-   }
+
+   /* Invoke this method in your program/startup class */
+   IocServicelet.Configure(config => config.ConfigFromFile());
 ```
