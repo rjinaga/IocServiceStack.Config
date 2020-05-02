@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28307.705
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IocServiceStack.Config", "IocServiceStack.Config\IocServiceStack.Config.csproj", "{FC4CBCCF-61C5-41FB-B83D-ED1B99AEAD92}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IocServiceStack.Config", "IocServiceStack.Config\IocServiceStack.Config.csproj", "{FC4CBCCF-61C5-41FB-B83D-ED1B99AEAD92}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IocServiceStack.Config.Tests", "IocServiceStack.Config.Tests\IocServiceStack.Config.Tests.csproj", "{3B95EA35-36B9-4305-A73F-5AB2A883EAC6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IocServiceStack.Config.Tests", "IocServiceStack.Config.Tests\IocServiceStack.Config.Tests.csproj", "{3B95EA35-36B9-4305-A73F-5AB2A883EAC6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

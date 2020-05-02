@@ -30,17 +30,31 @@ PM> Install-Package IocServiceStack.Config
       "Modules": [
         "SharedImplementationLib"
       ]
-    }
+    },
+    "StrictMode": true,
+    "Addition": [
+      {"Module": "CustomerDiscount"}
+    ]
 }
 ```
 
 ## Invoke Configuration
 
- ```csharp
+```csharp
    using IocServiceStack;
    using IocServiceStack.Config;
 
-   /* Invoke this method in your program/startup class */
+   /* Simple configuration */
+   IocContainer container = IocServiceStackConfig.Configure();
+   // You can use container object to add or replace new extensions
+```
+#### OR
+
+```csharp
+   using IocServiceStack;
+   using IocServiceStack.Config;
+
+   /* This configuration method gives little more control to use config object */
    IocServicelet.Configure(config => config.ConfigFromFile());
 ```
 #### OR
@@ -48,7 +62,7 @@ PM> Install-Package IocServiceStack.Config
    using IocServiceStack;
    using IocServiceStack.Config;
 
-   /* Invoke this method in your program/startup class */
+   /* This configuration method gives  more control to use config object */
    IocServicelet.Configure(config => {
         config.AddServices(service => {
             service.ConfigFromFile();

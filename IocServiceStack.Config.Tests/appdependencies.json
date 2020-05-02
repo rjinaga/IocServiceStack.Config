@@ -28,5 +28,11 @@
     "Modules": [
       "test22s"
     ]
-  }
+  },
+  "StrictMode": false,
+  "Addition": [
+    {
+      "Module": "IocServiceStack.Config.Tests"
+    }
+  ]
 }

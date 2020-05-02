@@ -1,8 +1,10 @@
 ﻿namespace IocServiceStack.Config
 {
-    internal class AppDependenciesObject
+    public class AppDependenciesObject
     {
-        public AppDependencies AppDependencies { get; set; }
-        public AppDependencies SharedDependencies { get; set; }
+        public ModuleDependencies AppDependencies { get; set; }
+        public ModuleDependencies SharedDependencies { get; set; }
+        public bool StrictMode { get; set; } = true;
+        public AdditionInfo[] Addition { get; set; }
     }
 }

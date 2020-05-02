@@ -1,9 +1,9 @@
 ﻿namespace IocServiceStack.Config
 {
-    internal class AppDependencies
+    public class ModuleDependencies
     {
         public string Name { get; set; }
         public string[] Modules { get; set; }
-        public AppDependencies Dependencies { get; set; }
+        public ModuleDependencies Dependencies { get; set; }
     }
 }
