@@ -23,7 +23,7 @@
 
             try
             {
-                Assembly assembly = Assembly.Load(additionInfo.Module);
+                Assembly assembly = Assembly.LoadFrom(additionInfo.Module);
                 Type type = assembly.GetType(configClass, throwOnError: false);
                 if (type != null)
                 {
