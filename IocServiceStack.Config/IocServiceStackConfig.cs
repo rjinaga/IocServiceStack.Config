@@ -14,5 +14,6 @@
             ConfigExtension.ConfigAddition(container, appDependencies);
             return container;
         }
+
     }
 }

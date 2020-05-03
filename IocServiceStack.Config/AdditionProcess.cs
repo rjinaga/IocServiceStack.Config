@@ -21,20 +21,18 @@
                                 ? additionInfo.ConfigClass
                                 : defaultConfigClass;
 
-            try
+            
+            Assembly assembly = Assembly.LoadFrom(additionInfo.LoadFrom + additionInfo.Module + ".dll");
+            Type type = assembly.GetType(configClass, throwOnError: true);
+            
+            var configStaticMethod = type.GetMethod(confMethod, BindingFlags.Static | BindingFlags.Public);
+
+            if (configStaticMethod == null)
             {
-                Assembly assembly = Assembly.LoadFrom(additionInfo.Module);
-                Type type = assembly.GetType(configClass, throwOnError: false);
-                if (type != null)
-                {
-                    var configStaticMethod = type.GetMethod(confMethod, BindingFlags.Static | BindingFlags.Public);
-                    configStaticMethod.Invoke(null, new[] { iocContainer });
-                }
+                throw new Exception($"Static method '{confMethod}' does not found in specified type.");
             }
-            catch
-            {
-                // Ignore any error
-            }
+            configStaticMethod.Invoke(null, new[] { iocContainer });
+
         }
     }
 }
